@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mainapp.views import get_index, get_initiate
+from mainapp.views import get_index, get_initiate, post_initiate
 from members.views import get_login, get_signup, post_login, post_logout
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     path('signup', get_signup),
     path('index', get_index),
     path('post_logout', post_logout),
-    path('initiate', get_initiate)
+    path('initiate', get_initiate),
+    path('initiate/post_initiate', post_initiate)
 ]
